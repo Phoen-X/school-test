@@ -10,21 +10,10 @@
     <property name="password" value="Ua34$Sit"/>
   </bean>
 
-  <bean id="sessionFactory"
-        class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+  <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
     <property name="dataSource" ref="dataSource"/>
     <property name="configLocation" value="classpath:hibernate.cfg.xml"/>
-    <property name="annotatedClasses">
-      <list>
-        <value>com.phoenix.web.domain.Student</value>
-      </list>
-    </property>
-    <property name="hibernateProperties">
-      <props>
-        <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/test</prop>
-        <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
-      </props>
-    </property>
+    <property name="packagesToScan" value="com.phoenix.web.domain"/>
   </bean>
 
   <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">

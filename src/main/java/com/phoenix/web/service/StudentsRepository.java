@@ -7,7 +7,8 @@ import com.phoenix.web.domain.Student;
 /**
  * Created by vvygulyarniy on 28.08.2015.
  */
-public interface SchoolInfoService {
-  int getStudentsCount();
-  String getSchoolName();
+public interface StudentsRepository {
+  List<Student> findAll();
+  Student findById(long id);
+  void save(Student student);
 }

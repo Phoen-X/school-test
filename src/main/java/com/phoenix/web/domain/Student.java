@@ -7,9 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-/**
- * Created by vvygulyarniy on 28.08.2015.
- */
+
 @Entity
 public class Student {
   private int id;
