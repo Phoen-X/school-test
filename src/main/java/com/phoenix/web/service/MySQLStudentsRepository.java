@@ -23,7 +23,7 @@ public class MySQLStudentsRepository implements StudentsRepository {
   @Override
   public List<Student> findAll() {
     try (Session session = sessionFactory.openSession()) {
-      return session.createQuery("select s from Student s").list();
+      return session.getNamedQuery("Student.findAll").list();
     }
   }
 
